@@ -16,10 +16,104 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      ontologyIRI="http://www.semanticweb.org/ja/ontologies/2024/4/untitled-ontology-13">
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Ghul"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Leszy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Potwor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Walka"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wiedzmin"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WiedzminSzkolyKota"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WiedzminSzkolyWilka"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Zlecenie"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#przeciwko"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#przyjmuje"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#wymaga"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Potwor"/>
+        <ObjectUnionOf>
+            <Class IRI="#Ghul"/>
+            <Class IRI="#Leszy"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Wiedzmin"/>
+        <ObjectUnionOf>
+            <Class IRI="#WiedzminSzkolyKota"/>
+            <Class IRI="#WiedzminSzkolyWilka"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Ghul"/>
+        <Class IRI="#Potwor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Leszy"/>
+        <Class IRI="#Potwor"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WiedzminSzkolyKota"/>
+        <Class IRI="#Wiedzmin"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WiedzminSzkolyWilka"/>
+        <Class IRI="#Wiedzmin"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Potwor"/>
+        <Class IRI="#Walka"/>
+        <Class IRI="#Wiedzmin"/>
+        <Class IRI="#Zlecenie"/>
+    </DisjointClasses>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#przeciwko"/>
+        <Class IRI="#Walka"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#przyjmuje"/>
+        <Class IRI="#Wiedzmin"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#wymaga"/>
+        <Class IRI="#Zlecenie"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#przeciwko"/>
+        <Class IRI="#Potwor"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#przyjmuje"/>
+        <Class IRI="#Zlecenie"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#wymaga"/>
+        <Class IRI="#Walka"/>
+    </ObjectPropertyRange>
 </Ontology>
 
 
