@@ -13,3 +13,7 @@ use of the R only C concept,
 use of the R min n C concept,
 use of the R max n C concept,
 the use of exhaustive inheritance (e.g. classes are divided only into lectures, laboratories, seminars and projects).
+
+### Ontology model
+
+![OntologyModel](/model.png)
