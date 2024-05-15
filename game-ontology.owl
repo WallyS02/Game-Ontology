@@ -54,6 +54,30 @@
     <Declaration>
         <ObjectProperty IRI="#wymaga"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#gaetan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#geralt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ghulZKrypty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#leszyZLasu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#stefanZuraw"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#utopiecZJeziora"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#walkaPrzeciwkoLeszemu"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#zlecenieOdWiesniakow"/>
+    </Declaration>
     <SubClassOf>
         <Class IRI="#Ghul"/>
         <Class IRI="#Potwor"/>
@@ -71,11 +95,66 @@
         <Class IRI="#Wiedzmin"/>
     </SubClassOf>
     <DisjointClasses>
+        <Class IRI="#Ghul"/>
+        <Class IRI="#Leszy"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#Potwor"/>
         <Class IRI="#Walka"/>
         <Class IRI="#Wiedzmin"/>
         <Class IRI="#Zlecenie"/>
     </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#WiedzminSzkolyKota"/>
+        <Class IRI="#WiedzminSzkolyWilka"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#WiedzminSzkolyKota"/>
+        <NamedIndividual IRI="#gaetan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#WiedzminSzkolyWilka"/>
+        <NamedIndividual IRI="#geralt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ghul"/>
+        <NamedIndividual IRI="#ghulZKrypty"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Leszy"/>
+        <NamedIndividual IRI="#leszyZLasu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Wiedzmin"/>
+        <NamedIndividual IRI="#stefanZuraw"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Potwor"/>
+        <NamedIndividual IRI="#utopiecZJeziora"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Walka"/>
+        <NamedIndividual IRI="#walkaPrzeciwkoLeszemu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zlecenie"/>
+        <NamedIndividual IRI="#zlecenieOdWiesniakow"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#przyjmuje"/>
+        <NamedIndividual IRI="#geralt"/>
+        <NamedIndividual IRI="#zlecenieOdWiesniakow"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#przeciwko"/>
+        <NamedIndividual IRI="#walkaPrzeciwkoLeszemu"/>
+        <NamedIndividual IRI="#leszyZLasu"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#wymaga"/>
+        <NamedIndividual IRI="#zlecenieOdWiesniakow"/>
+        <NamedIndividual IRI="#walkaPrzeciwkoLeszemu"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#przeciwko"/>
         <Class IRI="#Walka"/>
