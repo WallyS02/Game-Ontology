@@ -54,20 +54,6 @@
     <Declaration>
         <ObjectProperty IRI="#wymaga"/>
     </Declaration>
-    <EquivalentClasses>
-        <Class IRI="#Potwor"/>
-        <ObjectUnionOf>
-            <Class IRI="#Ghul"/>
-            <Class IRI="#Leszy"/>
-        </ObjectUnionOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Wiedzmin"/>
-        <ObjectUnionOf>
-            <Class IRI="#WiedzminSzkolyKota"/>
-            <Class IRI="#WiedzminSzkolyWilka"/>
-        </ObjectUnionOf>
-    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Ghul"/>
         <Class IRI="#Potwor"/>
