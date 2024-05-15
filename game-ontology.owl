@@ -125,11 +125,27 @@
         <NamedIndividual IRI="#leszyZLasu"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Wiedzmin"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Wiedzmin"/>
+            <ObjectComplementOf>
+                <ObjectUnionOf>
+                    <Class IRI="#WiedzminSzkolyKota"/>
+                    <Class IRI="#WiedzminSzkolyWilka"/>
+                </ObjectUnionOf>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
         <NamedIndividual IRI="#stefanZuraw"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Potwor"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#Potwor"/>
+            <ObjectComplementOf>
+                <ObjectUnionOf>
+                    <Class IRI="#Ghul"/>
+                    <Class IRI="#Leszy"/>
+                </ObjectUnionOf>
+            </ObjectComplementOf>
+        </ObjectIntersectionOf>
         <NamedIndividual IRI="#utopiecZJeziora"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -140,6 +156,16 @@
         <Class IRI="#Zlecenie"/>
         <NamedIndividual IRI="#zlecenieOdWiesniakow"/>
     </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#gaetan"/>
+        <NamedIndividual IRI="#geralt"/>
+        <NamedIndividual IRI="#stefanZuraw"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#ghulZKrypty"/>
+        <NamedIndividual IRI="#leszyZLasu"/>
+        <NamedIndividual IRI="#utopiecZJeziora"/>
+    </DifferentIndividuals>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#przyjmuje"/>
         <NamedIndividual IRI="#geralt"/>
