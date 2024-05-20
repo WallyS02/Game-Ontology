@@ -4,8 +4,8 @@
 
 - [x] 8 concepts (they may include concepts equivalent to complex concepts)
 - [x] 3 roles (necessarily a field and a sub-field for each!)
-- [ ] Abox part of reasoning process (individuals)
-- [ ] Tbox part of reasoning process (DL Query)
+- [x] Abox part of reasoning process (individuals)
+- [x] Tbox part of reasoning process (DL Query)
 
 Recommended interesting ways of reasoning include, for example:
 using the concept of R some (R some C),
