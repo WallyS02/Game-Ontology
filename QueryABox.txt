@@ -6,17 +6,10 @@ Query 2: R some (R some C)
 
 Wiedzmin and przyjmuje some (wymaga some Walka)
 
-Query 3: R only C
-
-Walka and przeciwko only Potwor
-
-Query 4: R min n C
+Query 3: R min n C
 
 Wiedzmin and przyjmuje min 1 Zlecenie
 
-Query 5:  R max n C
+Query 4:  R max n C
 
 Wiedzmin and przyjmuje max 2 Zlecenie
-
-
-
