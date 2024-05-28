@@ -34,6 +34,12 @@
         <Class IRI="#Walka"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#WalkaZStala"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WalkaZZelazem"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Wiedzmin"/>
     </Declaration>
     <Declaration>
@@ -44,6 +50,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Zlecenie"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ZlecenieTransportu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ZlecenieWalki"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#przeciwko"/>
@@ -78,6 +90,49 @@
     <Declaration>
         <NamedIndividual IRI="#zlecenieOdWiesniakow"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#zleceniePrzewozuJablek"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Walka"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#przeciwko"/>
+            <Class IRI="#Potwor"/>
+        </ObjectMinCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WalkaZStala"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#przeciwko"/>
+            <Class IRI="#Ghul"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WalkaZStala"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#przeciwko"/>
+            <Class IRI="#Leszy"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#WalkaZZelazem"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#przeciwko"/>
+            <ObjectComplementOf>
+                <ObjectUnionOf>
+                    <Class IRI="#Ghul"/>
+                    <Class IRI="#Leszy"/>
+                </ObjectUnionOf>
+            </ObjectComplementOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#ZlecenieWalki"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#wymaga"/>
+            <Class IRI="#Walka"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Ghul"/>
         <Class IRI="#Potwor"/>
@@ -87,12 +142,35 @@
         <Class IRI="#Potwor"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#WalkaZStala"/>
+        <Class IRI="#Walka"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WalkaZZelazem"/>
+        <Class IRI="#Walka"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wiedzmin"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectProperty IRI="#przyjmuje"/>
+            <Class IRI="#Zlecenie"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#WiedzminSzkolyKota"/>
         <Class IRI="#Wiedzmin"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#WiedzminSzkolyWilka"/>
         <Class IRI="#Wiedzmin"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ZlecenieTransportu"/>
+        <Class IRI="#Zlecenie"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ZlecenieWalki"/>
+        <Class IRI="#Zlecenie"/>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="#Ghul"/>
@@ -105,8 +183,16 @@
         <Class IRI="#Zlecenie"/>
     </DisjointClasses>
     <DisjointClasses>
+        <Class IRI="#WalkaZStala"/>
+        <Class IRI="#WalkaZZelazem"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class IRI="#WiedzminSzkolyKota"/>
         <Class IRI="#WiedzminSzkolyWilka"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ZlecenieTransportu"/>
+        <Class IRI="#ZlecenieWalki"/>
     </DisjointClasses>
     <ClassAssertion>
         <Class IRI="#WiedzminSzkolyKota"/>
@@ -149,23 +235,22 @@
         <NamedIndividual IRI="#utopiecZJeziora"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Walka"/>
+        <Class IRI="#WalkaZStala"/>
         <NamedIndividual IRI="#walkaPrzeciwkoLeszemu"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zlecenie"/>
+        <Class IRI="#ZlecenieWalki"/>
         <NamedIndividual IRI="#zlecenieOdWiesniakow"/>
     </ClassAssertion>
-    <DifferentIndividuals>
+    <ClassAssertion>
+        <Class IRI="#ZlecenieTransportu"/>
+        <NamedIndividual IRI="#zleceniePrzewozuJablek"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#przyjmuje"/>
         <NamedIndividual IRI="#gaetan"/>
-        <NamedIndividual IRI="#geralt"/>
-        <NamedIndividual IRI="#stefanZuraw"/>
-    </DifferentIndividuals>
-    <DifferentIndividuals>
-        <NamedIndividual IRI="#ghulZKrypty"/>
-        <NamedIndividual IRI="#leszyZLasu"/>
-        <NamedIndividual IRI="#utopiecZJeziora"/>
-    </DifferentIndividuals>
+        <NamedIndividual IRI="#zleceniePrzewozuJablek"/>
+    </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#przyjmuje"/>
         <NamedIndividual IRI="#geralt"/>
@@ -191,7 +276,7 @@
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#wymaga"/>
-        <Class IRI="#Zlecenie"/>
+        <Class IRI="#ZlecenieWalki"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#przeciwko"/>

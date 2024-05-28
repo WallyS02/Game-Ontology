@@ -5,8 +5,8 @@
 - [x] 8 concepts (they may include concepts equivalent to complex concepts)
 - [x] 3 roles (necessarily a field and a sub-field for each!)
 - [x] Abox part of reasoning process (individuals)
-- [ ] Tbox part of reasoning process (DL Query, can something exist?, equivalent classes)
-- [ ] Add concepts to new classes in field Equivalent To
+- [x] Tbox part of reasoning process (DL Query, can something exist?, equivalent classes)
+- [x] Add concepts to new classes in field Equivalent To
 
 Recommended interesting ways of reasoning include, for example:
 using the concept of R some (R some C),

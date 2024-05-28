@@ -1,0 +1,33 @@
+Query 1: TBox
+
+WiedzminSzkolyWilka and przyjmuje value zlecenieOdWiesniakow
+
+Query 2: R some (R some C)
+
+Wiedzmin and przyjmuje some (wymaga some Walka)
+
+Query 3: R min n C
+
+Wiedzmin and przyjmuje min 1 Zlecenie
+
+Query 4:  R max n C
+
+Wiedzmin and przyjmuje max 2 Zlecenie
+
+
+Query: Czy był Wiedzmin, który walczył z leszy przez zlecenie?
+
+Wiedzmin and (przyjmuje some (Zlecenie and (wymaga some (Walka and (przeciwko some Leszy)))))
+
+Query: Czy jest potwór na którego jest wyznaczone zlecenie?
+
+(Potwor and (inverse(przeciwko) some Walka)) and inverse(wymaga) some Zlecenie
+
+ 
+Pytanie: Czy wiedźmin może należeć do więcej niż jednej szkoły wiedźminów?
+
+Pytanie: Czy może istnieś walka, w której będzie więcej niż jeden potwór?
+
+Pytanie: Czy moze istnieć wiedźmin bez wykonywanego zlecenia?
+
+Pytanie: Czy wiedzmin może wykonywać więcej niż jedno zadanie na raz?
