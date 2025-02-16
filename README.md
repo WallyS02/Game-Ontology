@@ -1,5 +1,5 @@
-# Game Ontology
-
+# Game-Ontology
+Ontology designed for Knowledge Bases laboratories.
 ## The world of a selected computer game and the last adventure of a specific player
 
 - [x] 8 concepts (they may include concepts equivalent to complex concepts)
@@ -18,3 +18,8 @@ the use of exhaustive inheritance (e.g. classes are divided only into lectures, 
 ### Ontology model
 
 ![OntologyModel](/model.png)
+
+### Authors
+- Szymon Lider
+- Tomasz Lewandowski
+- Sebastian Kutny
